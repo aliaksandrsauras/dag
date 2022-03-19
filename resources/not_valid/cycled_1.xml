@@ -1,0 +1,6 @@
+<graph>
+    <node id="A"/>
+    <node id="B"/>
+    <edge source="A" target="B"/>
+    <edge source="B" target="A"/>
+</graph>

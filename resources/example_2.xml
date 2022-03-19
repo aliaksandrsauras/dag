@@ -1,0 +1,12 @@
+<graph>
+    <node id="A"/>
+    <node id="B" operator="sum"/>
+    <node id="C" operator="sum"/>
+    <node id="D" operator="sum"/>
+    <node id="E" operator="sum"/>
+    <edge source="A" target="B"/>
+    <edge source="A" target="C"/>
+    <edge source="B" target="D"/>
+    <edge source="C" target="D"/>
+    <edge source="D" target="E"/>
+</graph>
