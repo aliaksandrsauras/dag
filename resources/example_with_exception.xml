@@ -1,0 +1,15 @@
+<graph>
+    <node id="A" operator="sum"/>
+    <node id="B" operator="exception"/>
+    <node id="C" operator="max"/>
+    <node id="D"/>
+    <node id="E"/>
+    <node id="F"/>
+    <node id="G"/>
+    <edge source="B" target="A"/>
+    <edge source="C" target="A"/>
+    <edge source="D" target="B"/>
+    <edge source="E" target="B"/>
+    <edge source="F" target="C"/>
+    <edge source="G" target="C"/>
+</graph>
