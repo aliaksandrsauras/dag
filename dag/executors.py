@@ -1,5 +1,5 @@
 import logging
-import multiprocessing
+import os
 import threading
 
 logger = logging.getLogger(__name__)
@@ -15,7 +15,7 @@ class ThreadedExecutor:
 
     def execute(self, queue):
         if self.max_workers is None:
-            self.max_workers = self.calc_max_workers(queue)
+            self.max_workers = min(queue.qsize(), os.cpu_count())
 
         self.threads = []
         for _ in range(self.max_workers):
@@ -50,12 +50,3 @@ class ThreadedExecutor:
                         queue.put(out_node)
 
             queue.task_done()
-
-    @staticmethod
-    def calc_max_workers(queue):
-        result = queue.qsize()
-        cpu_count = multiprocessing.cpu_count()
-        if result > cpu_count:
-            result = cpu_count
-
-        return result
