@@ -1,4 +1,5 @@
 import pytest
+
 from dag.graph import DAG
 from dag.serialization import deserialize
 
