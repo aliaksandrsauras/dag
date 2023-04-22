@@ -24,7 +24,7 @@ def log_timing(fn):
             "'%s' from '%s' took %0.4f ms",
             fn.__qualname__,
             fn.__module__,
-            (end - start) * 1000
+            (end - start) * 1000,
         )
         return ret
 

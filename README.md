@@ -51,4 +51,4 @@ if is_valid:
 
 ## Requirements
 
-* Python >= 3.9
+* Python 3.9+

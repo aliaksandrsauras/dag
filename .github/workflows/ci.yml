@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ['3.9', '3.10']
+        python-version: ['3.9', '3.10', '3.11']
 
     steps:
     - uses: actions/checkout@v3
@@ -21,10 +21,18 @@ jobs:
         python-version: ${{ matrix.python-version }}
         architecture: x64
 
-    - name: Install dependencies
-      run: pip install -r requirements-dev.txt
-
-    - name: Test with pytest
+    - name: Install pipenv
       run: |
-        export PYTHONPATH=$PYTHONPATH:dag
-        pytest
+        python -m pip install --upgrade pipenv
+
+    - name: Install deps
+      run: |
+        make install
+
+    - name: Run lint
+      run: |
+        make lint
+
+    - name: Run test
+      run: |
+        make test
