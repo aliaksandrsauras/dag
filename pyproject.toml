@@ -1,10 +1,8 @@
 [tool.black]
 line-length = 100
-target-version = ["py39"]
+target-version = ["py39", "py310"]
 
 [tool.isort]
 profile = "black"
-known_local_folder = [
-    "dag",
-]
+known_local_folder = ["dag"]
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
