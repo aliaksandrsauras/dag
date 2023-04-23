@@ -1,6 +1,6 @@
 # Evaluation of a connected directed acyclic graph
 
-[![Actions](https://github.com/avsavras/dag/actions/workflows/ci.yml/badge.svg)](https://github.com/avsavras/dag/actions?workflow=ci)
+[![Actions](https://github.com/alexandersavras/dag/actions/workflows/tests.yml/badge.svg)](https://github.com/alexandersavras/dag/actions?workflow=tests)
 
 ## Getting started
 
