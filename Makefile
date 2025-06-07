@@ -1,27 +1,21 @@
 .DEFAULT_GOAL := help
 
-lint_include := dag tests
-
-install: clean ## Install project dependency
-	@pipenv install --deploy --dev
-
-test: ## Run tests
-	@pipenv run pytest
-
 clean: ## Clean project
 	@find . -name '.pytest_cache' -exec rm -fr {} +
-	@pipenv clean
 
-clean-env: ## Destroy virtualenv
-	@pipenv --rm
+venv: clean ## Install project dependency
+	@uv sync --dev
+
+test: ## Run tests
+	@uv run pytest
 
 lint: ## Check code quality
-	@pipenv run black $(lint_include) --check
-	@pipenv run isort $(lint_include) --check
+	@uv run ruff check
+	@uv run ruff format --check
 
-format: ## Format code
-	@pipenv run black $(lint_include)
-	@pipenv run isort $(lint_include)
+fmt: ## Format code
+	@uv run ruff check --fix
+	@uv run ruff format
 
 help:
 	@grep -E '^[1-9a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

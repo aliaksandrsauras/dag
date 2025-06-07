@@ -1,9 +1,8 @@
 # Evaluation of a connected directed acyclic graph
 
-[![Build status](https://github.com/alexandersavras/dag/actions/workflows/tests.yml/badge.svg)](https://github.com/alexandersavras/dag/actions)
-[![Python version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)](https://www.python.org/downloads/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+[![CI](https://github.com/aliaksandrsauras/dag/actions/workflows/tests.yml/badge.svg)](https://github.com/aliaksandrsauras/dag/actions)
+[![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/astral-sh/ruff/blob/main/LICENSE)
+[![Python version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/downloads/)
 
 ## Getting started
 
