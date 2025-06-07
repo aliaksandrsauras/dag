@@ -1,11 +1,32 @@
-[tool.black]
-line-length = 100
-target-version = ["py39", "py310", "py311"]
+[project]
+name = "dag"
+description = "Evaluation of a connected directed acyclic graph"
+version = "0.0.1"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [
+    { name = "Aliaksandr Sauras", email = "aliaksandrsauras@gmail.com" },
+]
+keywords = [
+    "dag",
+]
+dependencies = []
 
-[tool.isort]
-profile = "black"
-known_local_folder = ["dag"]
-sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.5",
+    "ruff>=0.11.10",
+]
+
+[tool.ruff]
+cache-dir = ".cache/ruff"
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint.isort]
+known-local-folder = [
+    "dag",
+]
 
 [tool.pytest.ini_options]
 addopts = "--tb=native"
