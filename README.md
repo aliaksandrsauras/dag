@@ -1,8 +1,8 @@
 # Evaluation of a connected directed acyclic graph
 
-[![CI](https://github.com/aliaksandrsauras/dag/actions/workflows/tests.yml/badge.svg)](https://github.com/aliaksandrsauras/dag/actions)
+[![CI](https://github.com/aliaksandrsauras/dag/actions/workflows/ci.yml/badge.svg)](https://github.com/aliaksandrsauras/dag/actions)
+![Python versions](https://img.shields.io/badge/python-3.11%20|%203.12%20|%203.13-blue)
 [![image](https://img.shields.io/pypi/l/ruff.svg)](https://github.com/astral-sh/ruff/blob/main/LICENSE)
-[![Python version](https://img.shields.io/badge/python-3.11-blue)](https://www.python.org/downloads/)
 
 ## Getting started
 
