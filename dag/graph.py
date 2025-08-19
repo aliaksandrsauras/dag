@@ -1,6 +1,5 @@
 import logging
 import queue
-from typing import Optional
 
 from dag.executors import ThreadedExecutor
 from dag.operators import OPERATORS
@@ -8,7 +7,7 @@ from dag.validators import DAGValidator
 
 logger = logging.getLogger(__name__)
 
-NODES_TYPE = list[tuple[str, Optional[str]]]
+NODES_TYPE = list[tuple[str, str | None]]
 EDGES_TYPE = list[tuple[str, str]]
 PARAMS_TYPE = dict[str, int]
 
